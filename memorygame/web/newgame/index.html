@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start New Game</title>
+    <link rel="stylesheet" href="/global/css/all.css">
+    <script src="/global/js/jquery.js"></script>
+    <link rel="stylesheet" href="/resources/css/layout.css">
+    <link rel="stylesheet" href="/resources/css/newgame.css">
+</head>
+<body>
+    <div class="root">
+        <div class="header">
+            <a href="/" draggable="false">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <p>Start New Game</p>
+        </div>
+        <div class="article">
+            <form action="/resources/backend/startgame.php" method="post">
+                <div>
+                    <label for="playername">Player Name : </label>
+                    <input type="text" name="playername" id="playername" placeholder="Player Name" autocomplete="off" required>
+                </div>
+                <input type="submit" value="Start">
+            </form>
+        </div>
+    </div>
+    <script defer src="/resources/js/newgame.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.header{
+    display: grid;
+    place-items: center;
+}
+.heading{
+    text-align: center;
+    width: max-content;
+    background-color: #8A2BE2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, #cd6ff6 0, #8A2BE2 100%, #4607b0 200%);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: 100% 50%;
+    animation: glow 2048ms ease infinite;
+}
+@keyframes glow {
+    0%, 100%{
+        text-shadow: 0 0 1rem #8A2BE2;
+        background-position: 0 50%;
+    }
+    50%{
+        text-shadow: none;
+        background-position: 100% 50%;
+    }
+}
+.article{
+    width: 100%;
+    height: 80svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+.btn{
+    cursor: pointer;
+    background-color: #333;
+    font-size: large;
+    text-decoration: none;
+    width: max(50%, 300px);
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid #bbb;
+    border-radius: 1em;
+    transition: border 512ms ease, box-shadow 1024ms ease, transform 128ms ease;
+}
+.btn:hover{
+    border: 2px solid #8A2BE2;
+    transform: scale(1.08);
+    box-shadow: 0 0 1rem #8A2BE2;
+}
+.btn:active{
+    transform: scale(0.96);
+}

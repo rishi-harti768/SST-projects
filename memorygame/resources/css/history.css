@@ -1,0 +1,41 @@
+.root{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    width: 100%;
+    font-size: 22px;
+    background-color: #333;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+.article{
+    padding: 8px;
+    width: 100%;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+table{
+    position: relative;
+    width: 60%;
+    min-width: min-content;
+    font-size: large;
+    border: 1px solid #8A2BE2;
+    border-radius: 20px;
+    border-collapse: collapse;
+}
+th{
+    background-color: #8A2BE2;
+    border: 1px solid #8A2BE2;
+    padding: 8px;
+}
+td{
+    border-collapse: collapse;
+    border: 1px solid #8A2BE2;
+    padding: 8px;
+}

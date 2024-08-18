@@ -1,0 +1,117 @@
+.playarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.dialogview{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    display: none;
+    place-items: center;
+}
+.dialog-score{
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 50%;
+    min-width: 50%;
+    font-size: large;
+    border: 2px solid #8A2BE2;
+    border-radius: 20px;
+}
+.dialog-score > h1{
+    text-align: center;
+    color: #8A2BE2;
+}
+.dialog-score > p > span{
+    font-weight: bolder;
+}
+.dialog-score > a{
+    align-self: flex-end;
+    text-decoration: none;
+    background-color: #8A2BE2;
+    padding: 8px;
+    border-radius: 100svw;
+}
+.timer{
+    background-color: green;
+    align-self: flex-start;
+    display: flex;
+    margin: 8px;
+    padding: 8px;
+    gap: 8px;
+    font-size: large;
+    text-rendering: optimizeSpeed;
+    background-color: #8A2BE2;
+    border-radius: 100svw;
+}
+.board{
+    width: 100%;
+    flex: 1;
+    display:  grid;
+    padding: 8px;
+    gap: 8px;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+}
+.board > .cards{
+    position: relative;
+    width : 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.cards > .cover{
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #242424;
+    border: 2px solid #242424;
+    border-radius: 20px;
+    backdrop-filter: blur(100svw);
+    transition: background-color 256ms ease, backdrop-filter 256ms ease;
+}
+.cards > img{
+    border-radius: 20px;
+}
+.cover:hover{
+    border: 2px solid #8A2BE2;
+}
+.cards > img{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+.cover .torch{
+    position: absolute;
+    aspect-ratio: 1;
+    height: 30%;
+    border-radius: 100svw;
+    /* filter: blur(30px); */
+    background-color: rgb(52, 60, 60);
+    transition: left 1024ms ease , top 1024ms ease;
+}
+@media(width < 426px)
+{
+    .board{
+        width: auto;
+        height: auto;
+        overflow: auto;
+    }
+    .board > .cards{
+        aspect-ratio: 16 / 10;
+        width: 192px;
+    }
+}
